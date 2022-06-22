@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  mailchimp.birthday:
+    image: mailchimp.birthday
+    tty: true
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        INSTALL_DEV: "true"
+    volumes:
+      - ../src:/workspace/
+      - ../src/tests:/workspace/tests/
+    env_file:
+      - ../docker/.dev.env
+    init: true
+    command: bash
+
+networks:
+  default:
+    external:
+      name: $NETWORK_NAME

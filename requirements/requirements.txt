@@ -1,0 +1,14 @@
+python-decouple==3.3
+python-dotenv==0.14.0
+pydantic==1.7.2
+sortedcontainers==2.3.0
+requests==2.25.1
+opencv-python==4.5.5.64
+pandas==1.2.3
+structlog==20.2.0
+colorama==0.4.4
+slack-bolt==1.13.0
+aiohttp==3.8.1
+structlog==20.2.0
+mailchimp3
+schedule==1.1.0

@@ -1,0 +1,20 @@
+version: "3.7"
+
+x-logging: &logging
+  driver: "json-file"
+  options:
+    max-file: "5"
+    max-size: 10m
+
+services:
+  mailchimp.birthday:
+    image: mailchimp.birthday:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    logging: *logging
+
+networks:
+  default:
+    external:
+      name: $NETWORK_NAME
