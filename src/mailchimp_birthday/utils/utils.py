@@ -20,11 +20,11 @@ def get_data_for_campaign(segment_id, month):
 
     """
     data = {
-        'recipients': {
-            'segment_opts': {
-                'saved_segment_id': segment_id,
-                'match': 'all',
-                'conditions': [
+        "recipients": {
+            "segment_opts": {
+                "saved_segment_id": segment_id,
+                "match": "all",
+                "conditions": [
                     {
                         "field": "merge5",
                         "op": "starts",
@@ -33,11 +33,11 @@ def get_data_for_campaign(segment_id, month):
                 ]
             }
         },
-        'settings': {
-            'subject_line': 'Celebrá tu cumpleaños en Galo',
-            'title': f'Celebra tu cumpleaños en Galo (mes {month})',
-            'from_name': 'Emiliano',
-            'reply_to': 'emilianoalcaraz@hotmail.com',
+        "settings": {
+            "subject_line": "¡Se viene tu cumple y tenemos un regalo para vos! 🎂",
+            "title": f"Celebra tu cumpleaños en Galo (mes {month})",
+            "from_name": "Galo Wines",
+            "reply_to": "hola@galowines.com.ar",
         }
     }
     return data
@@ -63,11 +63,11 @@ def get_data_for_campaign_birthday(segment_id, month, day, name):
         the dict to create the segment
     """
     data = {
-        'recipients': {
-            'segment_opts': {
-                'saved_segment_id': segment_id,
-                'match': 'all',
-                'conditions': [
+        "recipients": {
+            "segment_opts": {
+                "saved_segment_id": segment_id,
+                "match": "all",
+                "conditions": [
                     {
                         "field": "merge5",
                         "op": "is",
@@ -76,11 +76,11 @@ def get_data_for_campaign_birthday(segment_id, month, day, name):
                 ]
             }
         },
-        'settings': {
-            'subject_line': f'Feliz cumpleaños {name}',
-            'title': f'Feliz cumpleaños {name}',
-            'from_name': 'Galo Wines',
-            'reply_to': 'emilianoalcaraz@hotmail.com',
+        "settings": {
+            "subject_line": f"¡Feliz cumpleaños {name}! 🎉",
+            "title": f"Feliz cumpleaños {name}",
+            "from_name": "Galo Wines",
+            "reply_to": "hola@galowines.com.ar",
         }
     }
     return data
